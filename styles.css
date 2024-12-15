@@ -3,3 +3,23 @@
     margin:0 auto;
     text-align: center;
 }
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.footer-image {
+    height: 180px; /* Adjust as needed */
+}
+
+.contact-details {
+    align-self: flex-start; /* Stick contact info to the top */
+}
+
+.footer-text {
+    text-align: center;
+}
+
+
