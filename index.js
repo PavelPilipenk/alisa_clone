@@ -9,6 +9,7 @@ form.addEventListener("submit", function (e) {
     object[key] = value;
   });
   var json = JSON.stringify(object);
+  result.style.display = "";
   result.innerHTML = "Please wait...";
 
   fetch("https://api.web3forms.com/submit", {

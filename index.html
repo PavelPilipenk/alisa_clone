@@ -15,30 +15,57 @@
     <script src="index.js" async></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item links">
-                    <a class="nav-link active" aria-current="page" href="#mission_statement">Alisa Cole</a>
-              </li>
-              <li class="nav-item links">
-                <a class="nav-link active" aria-current="page" href="#about">About</a>
-              </li>
-              <li class="nav-item links">
-                <a class="nav-link active" aria-current="page" href="#lessons">Lessons</a>
-              </li>
-              <li class="nav-item links">
-                <a class="nav-link active" aria-current="page" href="#my_work">My Work</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div class="d-flex align-items-center p-3 bg-white">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid d-flex justify-content-between">
+      
+      <!-- Phone Number on the Left for both large and small screens -->
+      <div class="d-flex">
+        <a href="tel:+1234567890" 
+           class="navbar-text text-dark fw-bold" 
+           style="font-size: 1.1rem;">
+          Book a lesson: <span class="text-decoration-underline">(123) 456-7890</span>
+        </a>
+      </div>
+  
+      <!-- Navbar Toggler for Mobile (on the Right) -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item links">
+            <a class="nav-link active" aria-current="page" href="#home">Alisa Cole</a>
+          </li>
+          <li class="nav-item links">
+            <a class="nav-link active" aria-current="page" href="#about">About</a>
+          </li>
+          <li class="nav-item links">
+            <a class="nav-link active" aria-current="page" href="#lessons">Lessons</a>
+          </li>
+          <li class="nav-item links">
+            <a class="nav-link active" aria-current="page" href="#my_work">My Work</a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Email on the Right for both large and small screens -->
+      <div class="d-none d-lg-flex">
+        <a href="mailto:alisacoleviolin@gmail.com" 
+           class="navbar-text text-decoration-underline text-dark fw-bold" 
+           style="font-size: 1.1rem;">
+          alisacoleviolin@gmail.com
+        </a>
+      </div>
+  
+    </div>
+  </nav>
+  
+  
+  
+  
+      <div id="home" class="d-flex align-items-center p-3 bg-white">
         <img src="assets/white-violin.png" alt="Violin Icon" class="me-4" style="height: 90px; width: auto;">
         <h1 class="fs-1 fw-bold mb-0 ms-5">Alisa Cole Music</h1>
       </div>
@@ -57,9 +84,15 @@
             <div class="col-md-6">
               <div class="bg-gray-100 p-4 rounded-md shadow-sm">
                 <div class="text-center">
-                  <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">
-                    Book a lesson: (628)709-8421
+                  <h1 class="my-3 text-3xl font-semibold">
+                    Book a lesson: 
+                    <a href="tel:+16287098421" 
+                       class="hover:text-black font-bold" 
+                       style="text-decoration: none;">
+                       (<span style="text-decoration: underline;">628)709-8421</span>
+                    </a>
                   </h1>
+                      
                 </div>
                 <form action="https://api.web3forms.com/submit" method="POST" id="form">
                   <input type="hidden" name="from_name" value="Violin Website">
@@ -93,7 +126,7 @@
       </div>
       
 <!-- About Section in Three Columns -->
-<div class="container py-5">
+<div id="about" class="container py-5">
   <div class="row align-items-start">
       <!-- Column 1: Image -->
       <div class="col-md-4 text-center mb-4 mb-md-0">
@@ -134,18 +167,20 @@
 
 <!-- Lessons Section -->
 <div class="container py-5" id="lessons">
-  <h2 class="text-center mb-4 fw-bold" style="font-size: 2.5rem; text-transform: uppercase;">Lessons</h2>
+  <h2 class="text-center mb-4 fw-bold" style="font-size: 2.5rem;">Lessons</h2>
   <div class="row gx-0 justify-content-center text-center"> <!-- Reduced gap to 0 to bring sections closer -->
       <!-- Violin Section -->
       <div class="col-md-5 d-flex flex-column align-items-center " style="max-width: 450px;">
           <img src="assets/violin_solo.jpg" alt="Violin" style="width: 90%; height: auto; margin-bottom: -2px;"> <!-- Reduced image size -->
           <div class="text-container mt-2" style="padding: 0 10px; box-sizing: border-box;">
               <h4 class="fw-bold mt-3">Violin</h4>
+              <br>
               <p>
-                  Violin lessons with Alisa are tailored to the students' interests and goals in music. Alisa bases her lessons classically to develop a strong technical foundation while approaching her lesson plan with the student’s life and musical interests in mind. Ready to achieve fluency on the violin? Contact us to book violin lessons.
+                  Violin lessons with Alisa are tailored to the students' interests and goals in music. Alisa bases her lessons classically to develop a strong technical foundation while approaching her lesson plan with the student’s life and musical interests in mind. Ready to achieve fluency on the violin? <a href="#home" class="text-decoration-underline hover:text-black">Contact me</a> to book violin lessons.
               </p>
+              <br>
               <p class="fst-italic">
-                  "I prefer to teach the Sassmannshaus method, which is popular in Germany for the young violinists. As they grow in their technique, we will begin to introduce classic etudes and orchestral repertoire that can win a student an audition or provide technical fluency to be able to just PLAY." - Alisa
+                  "I prefer to teach the Sassmannshaus method, which is popular in Germany for the young violinists. As they grow in their technique, we will begin to introduce classic etudes and orchestral repertoire that can win a student an audition or provide technical fluency to be able to just PLAY." - Alisa C.
               </p>
           </div>
       </div>
@@ -155,9 +190,11 @@
           <img src="assets/piano.jpg" alt="Piano" style="width: 90%; height: auto; margin-bottom: -2px;"> <!-- Reduced image size -->
           <div class="text-container mt-2" style="padding: 0 10px; box-sizing: border-box;">
               <h4 class="fw-bold mt-3">Piano</h4>
+              <br>
               <p>
-                  Piano is the best introductory instrument in music and beautifully translates into any other instrument the student grows into. Interested in starting to learn the musical "language"? Contact us to book piano lessons.
+                Piano is the best introductory instrument in music and beautifully translates into any other instrument the student grows into. Interested in starting to learn the musical "language"? <a href="#home" class="text-decoration-underline hover:text-black">Contact me</a> to book piano lessons.
               </p>
+              
           </div>
       </div>
   </div>
@@ -203,55 +240,64 @@
 </div>
 
 <!-- My Work Section -->
-<div class="container py-5" id="my-work">
-  <h2 class="text-center mb-4 fw-bold" style="font-size: 2.5rem; text-transform: uppercase;">My Work</h2>
+<div id="my_work" class="container py-5" id="my-work">
+  <h2 class="text-center mb-4 fw-bold" style="font-size: 2.5rem;">My Work</h2>
 
-  <!-- First Song Embed -->
+  <!-- First Song -->
   <div class="d-flex justify-content-center mb-3">
-    <iframe width="300" height="120" scrolling="no" frameborder="no" allow="autoplay" 
-      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/jascemusic/chime-by-lunar-year-band?si%3Daae927cf93964f7bb54b039916f32460&utm_source%3Dclipboard&utm_medium%3Dtext&utm_campaign%3Dsocial_sharing&color=%23ff5500&inverse=false&auto_play=false&show_user=false&show_artwork=false">
-    </iframe>
+    <audio controls>
+      <source src="assets/songs/song1.wav" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   </div>
 
-  <!-- Second Song Embed -->
+  <!-- Second Song -->
   <div class="d-flex justify-content-center mb-3">
-    <iframe width="300" height="120" scrolling="no" frameborder="no" allow="autoplay" 
-      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/jascemusic/second-track-url&color=%23ff5500&inverse=false&auto_play=false&show_user=false&show_artwork=false">
-    </iframe>
+    <audio controls>
+      <source src="assets/songs/song2.wav" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   </div>
 
-  <!-- Third Song Embed -->
+  <!-- Third Song -->
   <div class="d-flex justify-content-center mb-3">
-    <iframe width="300" height="120" scrolling="no" frameborder="no" allow="autoplay" 
-      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/jascemusic/third-track-url&color=%23ff5500&inverse=false&auto_play=false&show_user=false&show_artwork=false">
-    </iframe>
+    <audio controls>
+      <source src="assets/songs/song3.wav" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   </div>
 
-  <!-- Fourth Song Embed -->
+  <!-- Fourth Song -->
   <div class="d-flex justify-content-center mb-3">
-    <iframe width="300" height="120" scrolling="no" frameborder="no" allow="autoplay" 
-      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/jascemusic/fourth-track-url&color=%23ff5500&inverse=false&auto_play=false&show_user=false&show_artwork=false">
-    </iframe>
+    <audio controls>
+      <source src="assets/songs/song4.wav" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   </div>
 
-  <!-- Fifth Song Embed -->
+  <!-- Fifth Song -->
   <div class="d-flex justify-content-center mb-3">
-    <iframe width="300" height="120" scrolling="no" frameborder="no" allow="autoplay" 
-      src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/jascemusic/fifth-track-url&color=%23ff5500&inverse=false&auto_play=false&show_user=false&show_artwork=false">
-    </iframe>
+    <audio controls>
+      <source src="assets/songs/song5.wav" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   </div>
+</div>
 
 </div>
-  <footer class="py-3 my-4"><hr>
-      <div class="footer-container d-flex align-items-start justify-content-center">
-          <img class="footer-image me-3" src="assets/transparentviolin.png" alt="violin picture">
-          <div class="contact-details">
-              <p>Alisa Cole</p>
-              <p class="mb-1">(123) 456-7890</p>
-              <p>alisa.cole@example.com</p>
-          </div>
+<footer>
+  <hr>
+  <div class="footer-container d-flex align-items-start justify-content-center">
+      <img class="footer-image me-3" src="assets/transparentviolin.png" alt="violin picture">
+      <div class="contact-details">
+        <br>
+          <p><a href="tel:+1234567890">(123) 456-7890</a></p>
+          <p><a href="mailto:alisacoleviolin@gmail.com">alisacoleviolin@gmail.com</a></p>
+          <p class="mb-1">© 2025 by Alisa Cole</p>
       </div>
-  </footer>
+  </div>
+</footer>
+
   
 </body>
 </html>

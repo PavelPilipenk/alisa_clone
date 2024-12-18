@@ -21,3 +21,23 @@
 .footer-text {
     text-align: center;
 }
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1020; /* Ensure the header stays above other elements */
+    background-color: white; /* Keep the background consistent */
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navbar .nav-link {
+    font-size: 1.1rem; /* Adjust as needed */
+    font-weight: 500; /* Slightly bolder for better readability */
+  }
+  
