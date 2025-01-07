@@ -21,12 +21,14 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'AW-11519142331');
+      gtag('config', 'AW-11519142331', { debug_mode: true });
     </script>
     <!-- Event snippet for Submit lead form conversion page -->
     <script>
       function gtag_report_conversion(url) {
+        console.log('Conversion event triggered'); // Debugging
         var callback = function () {
+          console.log('Callback executed'); // Debugging
           if (typeof(url) != 'undefined') {
             window.location = url;
           }
