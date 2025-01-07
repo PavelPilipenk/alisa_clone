@@ -14,16 +14,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <link href="styles.css" rel="stylesheet"/>
     <script src="index.js" async></script>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11519142331"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11519142331"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'AW-11519142331');
-</script>
+      gtag('config', 'AW-11519142331');
+    </script>
+    <!-- Event snippet for Submit lead form conversion page -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-11519142331/TycWCND6rfwZELvT4PQq',
+            'value': 1.0,
+            'currency': 'USD',
+            'event_callback': callback
+        });
+        return false;
+      }
+      </script>
+</head>
+
 <body>
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid d-flex justify-content-between">
@@ -101,7 +119,7 @@
                             </a>
                         </h1>
                     </div>
-                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form" onsubmit="gtag_report_conversion();">
                         <input type="hidden" name="from_name" value="Violin Website">
                         <input type="hidden" name="subject" value="New message for Alisa from violin lessons website">
                         <input type="hidden" name="access_key" value="af33934d-ea9f-4cc6-9a29-d9b04f7d6247">
