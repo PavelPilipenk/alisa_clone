@@ -14,34 +14,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <link href="styles.css" rel="stylesheet"/>
     <script src="index.js" async></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11519142331"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-11519142331', { debug_mode: true });
-    </script>
-    <!-- Event snippet for Submit lead form conversion page -->
-    <script>
-      function gtag_report_conversion(url) {
-        console.log('Conversion event triggered'); // Debugging
-        var callback = function () {
-          console.log('Callback executed'); // Debugging
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-11519142331/TycWCND6rfwZELvT4PQq',
-            'value': 1.0,
-            'currency': 'USD',
-            'event_callback': callback
-        });
-        return false;
-      }
-      </script>
 </head>
 
 <body>
