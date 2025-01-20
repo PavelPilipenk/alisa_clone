@@ -40,3 +40,36 @@ h2 {
     font-size: 1.1rem; /* Adjust as needed */
     font-weight: 500; /* Slightly bolder for better readability */
 }
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .video-container iframe {
+    width: 70%; /* Takes up 70% of container width */
+    height: auto; /* Allow height to adjust automatically based on the width */
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio of 16:9 */
+    max-width: 100%; /* Ensure it doesn't exceed container width */
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+    .video-container iframe {
+      width: 90%; /* Video will take 90% of screen width on smaller screens */
+      height: auto;
+      aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+    }
+  }
+  
+  /* Media query for very small screens (e.g., mobile devices in portrait mode) */
+  @media (max-width: 480px) {
+    .video-container iframe {
+      width: 100%; /* Full width on very small screens */
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  }
+  
