@@ -49,7 +49,7 @@ h2 {
   }
   
   .video-container iframe {
-    width: 70%; /* Takes up 70% of container width */
+    width: 50%; /* Takes up 70% of container width */
     height: auto; /* Allow height to adjust automatically based on the width */
     aspect-ratio: 16 / 9; /* Maintain aspect ratio of 16:9 */
     max-width: 100%; /* Ensure it doesn't exceed container width */
