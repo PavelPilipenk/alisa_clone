@@ -72,3 +72,16 @@ h2 {
       aspect-ratio: 16 / 9;
     }
   }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;  /* Stack items vertically */
+      gap: 1rem !important;  /* Adjust gap between blockquotes */
+    }
+
+    .blockquote {
+      max-width: 100%;  /* Allow blockquotes to take full width */
+      height: auto;  /* Let height adjust based on content */
+      margin-bottom: 1rem;  /* Add space between blockquotes */
+    }
+  }
